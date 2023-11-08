@@ -1,0 +1,128 @@
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#hero__section {
+  opacity: 0.4;
+}
+
+.production-oils {
+  background: #f7f7f7;
+}
+
+.assas {
+  color: var(--black, #333);
+  text-align: center;
+
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrap .div {
+  border: none;
+  min-width: 250px;
+}
+.cart {
+  min-width: 250px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+.modals {
+  display: grid;
+  gap: 50px;
+  grid-template-areas: 'one two';
+  align-items: center;
+}
+.image {
+  grid-area: one;
+}
+img {
+  width: 300px;
+}
+.text {
+  grid-area: two;
+  text-align: left;
+}
+.text h2 {
+  text-align: left;
+  color: var(--yellow, #f9b101);
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 25.2px */
+  list-style: armenian;
+  margin-bottom: 15px;
+}
+.text > span {
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: var(--black, #333);
+
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+.text p {
+  opacity: 0.5;
+  color: var(--black, #333);
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.text strong {
+  display: block;
+  text-align: left;
+  color: var(--black, #333);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+}
+.cart button {
+  display: inline-flex;
+  padding: 20px 40px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 30px 5px;
+  background: var(--yellow, #f9b101);
+  margin-bottom: 50px;
+}
+.text {
+  color: var(--black, #333);
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .modals {
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+      'one'
+      'two';
+  }
+}

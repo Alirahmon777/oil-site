@@ -1,0 +1,277 @@
+.house1_page {
+  position: relative;
+}
+.house1_carousel_button_group {
+  position: absolute;
+  bottom: -40px;
+  right: 60px;
+}
+.house2_page {
+  position: relative;
+}
+.house2_carousel_button_group {
+  position: absolute;
+  bottom: -40px;
+  right: 60px;
+}
+.house3_page {
+  position: relative;
+}
+.house3_carousel_button_group {
+  position: absolute;
+  bottom: -40px;
+  right: 60px;
+}
+.house4_page {
+  position: relative;
+}
+.house4_carousel_button_group {
+  position: absolute;
+  bottom: -40px;
+  right: 60px;
+}
+.carousel-control-prev {
+  background-color: rgb(48, 48, 52) !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.carousel-control-next {
+  background-color: rgb(48, 48, 52) !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: block;
+  width: 23px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgb(15, 15, 15);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+
+
+
+.plan {
+  background-color: #c9a47e;
+  padding: 100px 14rem 150px 14rem;
+}
+.plan_content {
+  display: grid;
+  grid-template-areas: "one two two";
+  gap: 50px;
+  align-items: center;
+}
+.plan_img {
+  grid-area: "one";
+}
+.plan_desc {
+  grid-area: "two";
+}
+.plan_wrap {
+  background-color: #fff;
+  padding: 20px 30px;
+}
+.plan_wrap h2 {
+  color: #222;
+  margin-bottom: 15px;
+  font-size: 27px;
+  font-weight: 600;
+}
+/* .plan_desc a{
+  display: block;
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #DEA25C;
+  color: #555;
+  border-radius: 25px;
+  margin-bottom: 35px;
+} */
+
+.plan_btn {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 1000px;
+  padding: 12px 25px;
+  /* box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15); */
+  transition: 0.5s all ease-in-out;
+  color: #fff;
+  /* filter: drop-shadow(5px 10px 10px #fa8602); */
+  background: #dea25c;
+  box-shadow: 5px 5px 2px #dea25c, 5px 5px 10px #dea25c,
+    5px 5px 20px #dea25c, 5px 5px 30px #dea25c;
+}
+.plan_btn:hover {
+  cursor: pointer;
+  background: white;
+  color: #1f4141;
+  box-shadow: 0 0 0 #fff;
+  color: #dea25c;
+  border: 2px solid #dea25c;
+}
+
+/* .plan_btn_wiggle {
+  animation: wiggle 4s 2s infinite;
+} */
+/* 
+@keyframes wiggle {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+} */
+
+.plan_info {
+  margin-bottom: 40px;
+}
+.plan_info p {
+  font-size: 20px;
+  color: #bb9256;
+  position: relative;
+  margin-left: 22px;
+  margin-bottom: 15px;
+}
+.plan_info p::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bb9256;
+  left: -20px;
+  top: 10px;
+}
+
+.plan_btn_group{
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.plan_btn_group button{
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  font-weight: bold;
+  border-radius: 100px;
+  padding: 0.8rem 1.4rem;
+  box-shadow: 3px 3px 5px;
+  font-size: 16px;
+}
+.plan_btn_group button:hover{
+  background-color: #fff;
+  color: #C9A47E;
+}
+@media (max-width: 800px) {
+  .plan {
+    padding: 50px 1.25rem;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 875px) {
+  .plan_btn_group button{
+    padding: 0.4rem 0.8rem;
+    box-shadow: 2px 2px 3px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .plan_btn_group{
+    margin-bottom: 20px;
+    gap: 5px;
+  }
+  .plan_info p {
+    font-size: 16px;
+    color: #bb9256;
+    position: relative;
+    margin-left: 22px;
+    margin-bottom: 15px;
+  }
+  .plan_wrap h2 {
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .plan_info p::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #bb9256;
+    left: -20px;
+    top: 7px;
+  }
+  .plan_btn_group button{
+    padding: 0.3rem 0.7rem;
+    box-shadow: 2px 2px 3px;
+    font-size: 13px;
+  }
+  .plan_btn {
+    font-size: 12px;
+    border: 1px solid white;
+    padding: 8px 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .plan_content {
+    display: grid;
+    grid-template-areas: "one"
+    "two";
+    gap: 50px;
+    align-items: center;
+  }
+  .plan_wrap{
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 380px) {
+  .plan_btn_group{
+    gap: 3px;
+  }
+  .plan_btn_group button{
+    padding: 0.3rem 0.7rem;
+    box-shadow: 1px 1px 3px;
+    font-size: 12px;
+  }
+}

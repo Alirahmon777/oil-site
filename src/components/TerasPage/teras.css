@@ -1,0 +1,120 @@
+.wrap {
+  display: grid;
+  grid-template-areas:
+    'txt1 img txt4'
+    'txt2 img txt5'
+    'txt3 img txt6';
+  padding: 100px 160px;
+  column-gap: 80px;
+}
+.haybe {
+  color: var(--black, #333);
+
+  font-size: 40px;
+  width: 970px;
+  margin: 0 auto;
+  height: 98px;
+  flex-shrink: 0;
+  line-height: normal;
+}
+.wrap1 {
+  grid-area: txt1;
+}
+.wrap2 {
+  grid-area: txt2;
+}
+.wrap3 {
+  grid-area: txt4;
+}
+.wrap5 {
+  grid-area: txt5;
+}
+.wrap6 {
+  grid-area: txt6;
+}
+.wrap4 {
+  grid-area: img;
+}
+.head {
+  text-align: center;
+  width: 100%;
+}
+.text {
+  color: var(--black, #333);
+
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.firsttwo {
+  color: var(--yellow, #f9b101) !important;
+  text-align: right;
+  display: inline !important;
+
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text::after {
+  content: attr(data-after);
+  color: black;
+}
+div h2 {
+  color: var(--yellow, #f9b101);
+  text-align: center;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.bobotext {
+  color: var(--black, #333);
+  text-align: center;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 25.2px */
+  max-width: 470px;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+@media (max-width: 700px) {
+  .wrap {
+    display: grid;
+    grid-template-areas:
+      'txt1'
+      'txt2'
+      'txt3'
+      'img'
+      'txt4'
+      'txt5'
+      'txt6';
+    padding: 20px 20px;
+  }
+  .wrap1 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+}
+@media (max-width: 700px) {
+  .haybe {
+    color: var(--black, #333);
+
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    padding: auto;
+    line-height: normal;
+  }
+}

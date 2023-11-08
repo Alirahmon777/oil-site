@@ -1,0 +1,85 @@
+.anim_btn {
+  box-shadow: 10px 20px 20px rgb(223, 223, 240);
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  top: 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+}
+
+.header.scrolled {
+  background: #5a9213;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.akh {
+  color: var(--yellow, #f9b101);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.herotexter {
+  color: #fff;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.anim_button {
+  display: inline-flex;
+  padding: 14px 40px;
+  align-items: flex-start;
+  font-weight: 600;
+  text-transform: uppercase;
+  gap: 10px;
+  border-radius: 30px 5px;
+  background: var(--yellow, #f9b101);
+}
+.anim_button:hover {
+  cursor: pointer;
+  background: white;
+  color: #1f4141;
+}
+.anim_button_float {
+  animation: float 0.8s linear alternate infinite;
+}
+.abbbos {
+  position: relative;
+  max-width: 100vw;
+}
+.mobileheader {
+  background: #5a9213;
+}
+.abooo {
+  width: 90vw;
+}
+.to-gray-900 {
+  --tw-gradient-to: #5a9213;
+}
+.from-gray-700 {
+  --tw-gradient-to: #5a9213;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+@media (max-width: 1200px) {
+  .project_wrap .nav_gap {
+    column-gap: 1.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+}

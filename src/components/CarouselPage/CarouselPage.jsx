@@ -1,39 +1,22 @@
 import React, { useState } from 'react';
-import img1 from '../../assets/yog1.png';
-import img2 from '../../assets/yog2.png';
-import img3 from '../../assets/yog3.png';
+import bgSeed from '../../assets/bg-seed.png';
 import Form from '../Form/Form';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import { motion } from 'framer-motion';
-
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Button, Modal } from 'antd';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/a11y';
 import './carousel.css';
+import { oils } from '../../data/index.js';
+import { Swiper, SwiperSlide } from 'swiper/react';
 const CarouselPage = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
   const [select, setselect] = useState({});
-  const oils = [
-    {
-      id: 1,
-      text: '«1 литр»',
-      img: img1,
-      info: '«Семейное», «Дончанка», «Донола» - 100% подсолнечное рафинированное дезодорированное масло, что подтверждено многочисленными испытаниями аккредитованных независимых организаций. Мы нацелены дать нашим потребителям лучший качественный продукт, который по своему жиро-кислотному составу самым лучшим образом подходит для организма человека.',
-    },
-    {
-      id: 2,
-      text: '«2 литров»',
-      img: img2,
-      info: '«Семейное», «Дончанка», «Донола» - 100% подсолнечное рафинированное дезодорированное масло, что подтверждено многочисленными испытаниями аккредитованных независимых организаций. Мы нацелены дать нашим потребителям лучший качественный продукт, который по своему жиро-кислотному составу самым лучшим образом подходит для организма человека.',
-    },
-    {
-      id: 2,
-      text: '«5 литров»',
-      img: img3,
-      info: '«Семейное», «Дончанка», «Донола» - 100% подсолнечное рафинированное дезодорированное масло, что подтверждено многочисленными испытаниями аккредитованных независимых организаций. Мы нацелены дать нашим потребителям лучший качественный продукт, который по своему жиро-кислотному составу самым лучшим образом подходит для организма человека.',
-    },
-  ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -49,30 +32,43 @@ const CarouselPage = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         id='hero__section'
-        className='carousel p-5 slide carousel_page production-oils'
+        className='carousel p-5 slide carousel_page production-oils relative'
         data-bs-ride='carousel'
       >
+        <div className='absolute -left-40 md:-left-28 lg:-left-14 xl:left-0'>
+          <img src={bgSeed} alt='' />
+        </div>
         <h2 className='h2 assas'>ПРОДУКЦИЯ НАШЕЙ КОМПАНИИ</h2>
-        <div className='wrap'>
+        <Swiper
+          className=''
+          modules={[A11y, Pagination]}
+          pagination={{ clickable: true }}
+          slidesPerView={2}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={swiper => console.log(swiper)}
+        >
           {oils.map((oil, i) => (
-            <div className='cart' key={i}>
-              <img src={oil.img} alt='' />
-              <p className='text'>{oil.text}</p>
-              <div className='w-100 d-flex justify-content-center'>
-                <button
-                  onClick={() => {
-                    setselect(oil);
-                    showModal();
-                  }}
-                  className='mt-4'
-                >
-                  Подробнее
-                </button>
+            <SwiperSlide key={i}>
+              <div className='cart'>
+                <img src={oil.img} alt='' />
+                <p className='text mt-2'>{oil.text}</p>
+                <div className='w-100 d-flex justify-content-center'>
+                  <button
+                    onClick={() => {
+                      setselect(oil);
+                      showModal();
+                    }}
+                    className='mt-4'
+                  >
+                    Подробнее
+                  </button>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
+        </Swiper>
 
-          {/* <div className='cart'>
+        {/* <div className='cart'>
             <img src={a[select][1].img} alt='' />
             <p className='text'>{a[select][1].text}</p>
             <div className='w-100 d-flex justify-content-center'>
@@ -104,7 +100,6 @@ const CarouselPage = () => {
               </button>
             </div>
           </div> */}
-        </div>
       </motion.div>
       <Modal
         width={1000}

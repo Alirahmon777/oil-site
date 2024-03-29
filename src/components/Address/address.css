@@ -1,7 +1,7 @@
 .address_wrap {
   display: grid;
   grid-template-areas: 'one one two two two';
-  padding: 100px 0px 100px 160px;
+  padding: 20px 30px;
   column-gap: 80px;
   align-items: center;
 }
@@ -13,7 +13,7 @@
 .section_paragrph {
   color: var(--black, #333);
 
-  font-size: 40px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 140%; /* 56px */
@@ -21,8 +21,9 @@
 }
 .section_span {
   color: var(--black, #333);
-
+  margin-top: 10px;
   font-size: 18px;
+  display: block;
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 25.2px */

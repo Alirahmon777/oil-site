@@ -22,17 +22,10 @@
   line-height: normal;
   text-transform: uppercase;
 }
-.wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.wrap .div {
-  border: none;
-  min-width: 250px;
-}
+
 .cart {
   min-width: 250px;
+  max-width: 300px;
   cursor: pointer;
   margin-bottom: 30px;
   border-radius: 25px;

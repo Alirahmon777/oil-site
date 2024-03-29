@@ -48,12 +48,14 @@ function Hero() {
     <div className='bg-white'>
       <header className={`header ${scrollTop ? 'scrolled' : ''}`}>
         <nav className='flex items-center justify-between px-6 py-2 lg:px-12' aria-label='Global'>
-          <div className=''>
-            <a href='#' className=''>
+          <div className='flex-1'>
+            <a href='#' className='max-w-[120px]'>
               <span className='sr-only'>Your Company</span>
               <div className='flex gap-[10px] items-center '>
                 <img className='h-12 w-auto lg:h-14' src={logo} alt='' />
-                <p className='text-white text-xs hidden sm:block'>Производство подсолнечных масел</p>
+                <p className='text-white text-xs hidden sm:block w-20 pointer-events-none'>
+                  Производство подсолнечных масел
+                </p>
               </div>
             </a>
           </div>
@@ -72,7 +74,7 @@ function Hero() {
               <a
                 key={item.nameuz}
                 href={item.href}
-                className='text-sm transition-all hover:!text-[--yellow] font-semibold leading-6 text-white'
+                className='lg:text-xs xl:text-sm transition-all hover:!text-[--yellow] font-semibold leading-6 text-white'
               >
                 {item.nameuz}
               </a>
@@ -131,7 +133,7 @@ function Hero() {
         </Dialog>
       </header>
 
-      <div className='abbbos relative isolate h-screen '>
+      <div className='abbbos relative isolate h-full'>
         <div className='bg-image absolute w-full h-full -z-10'>
           <img src={bgHero} alt='bg' className='object-fill w-full h-full' />
         </div>

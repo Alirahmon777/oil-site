@@ -10,10 +10,10 @@
 .haybe {
   color: var(--black, #333);
 
-  font-size: 40px;
-  width: 970px;
+  font-size: 34px;
+  width: 770px;
   margin: 0 auto;
-  height: 98px;
+  margin-top: 8px;
   flex-shrink: 0;
   line-height: normal;
 }
@@ -41,8 +41,7 @@
 }
 .text {
   color: var(--black, #333);
-
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   line-height: normal;
   text-transform: uppercase;
@@ -51,9 +50,8 @@
 .firsttwo {
   color: var(--yellow, #f9b101) !important;
   text-align: right;
+  font-size: 18px !important;
   display: inline !important;
-
-  font-size: 24px !important;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -76,14 +74,12 @@ div h2 {
 }
 .bobotext {
   color: var(--black, #333);
-  text-align: center;
-
-  font-size: 18px;
+  margin-top: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 25.2px */
   max-width: 470px;
-  max-width: 400px;
   flex-shrink: 0;
 }
 @media (max-width: 700px) {
